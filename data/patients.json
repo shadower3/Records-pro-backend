@@ -1,0 +1,185 @@
+[
+  {
+    "_id": "1756190000001",
+    "firstName": "John",
+    "lastName": "Doe",
+    "dob": "1985-03-15T00:00:00.000Z",
+    "sex": "M",
+    "phone": "555-0101",
+    "email": "john.doe@email.com",
+    "address": "123 Main St, Anytown, USA",
+    "emergencyContact": {
+      "name": "Jane Doe",
+      "phone": "555-0102",
+      "relationship": "Spouse"
+    },
+    "allergies": [
+      "Penicillin",
+      "Shellfish"
+    ],
+    "insurance": {
+      "provider": "Blue Cross",
+      "policyNumber": "BC123456",
+      "groupNumber": "GRP001"
+    },
+    "status": "Active",
+    "createdAt": "2025-08-01T10:30:00.000Z",
+    "updatedAt": "2025-08-01T10:30:00.000Z"
+  },
+  {
+    "_id": "1756190000002",
+    "firstName": "Sarah",
+    "lastName": "Johnson",
+    "dob": "1992-07-22T00:00:00.000Z",
+    "sex": "F",
+    "phone": "555-0201",
+    "email": "sarah.johnson@email.com",
+    "address": "456 Oak Ave, Somewhere, USA",
+    "emergencyContact": {
+      "name": "Mike Johnson",
+      "phone": "555-0202",
+      "relationship": "Brother"
+    },
+    "allergies": [
+      "Latex"
+    ],
+    "insurance": {
+      "provider": "Aetna",
+      "policyNumber": "AET789012",
+      "groupNumber": "GRP002"
+    },
+    "status": "Active",
+    "createdAt": "2025-08-05T14:15:00.000Z",
+    "updatedAt": "2025-08-05T14:15:00.000Z"
+  },
+  {
+    "_id": "1756190000003",
+    "firstName": "Michael",
+    "lastName": "Brown",
+    "dob": "1978-11-08T00:00:00.000Z",
+    "sex": "M",
+    "phone": "555-0301",
+    "email": "michael.brown@email.com",
+    "address": "789 Pine St, Elsewhere, USA",
+    "emergencyContact": {
+      "name": "Lisa Brown",
+      "phone": "555-0302",
+      "relationship": "Wife"
+    },
+    "allergies": [],
+    "insurance": {
+      "provider": "Cigna",
+      "policyNumber": "CIG345678",
+      "groupNumber": "GRP003"
+    },
+    "status": "Active",
+    "createdAt": "2025-08-10T09:45:00.000Z",
+    "updatedAt": "2025-08-10T09:45:00.000Z"
+  },
+  {
+    "_id": "1756190000004",
+    "firstName": "Emily",
+    "lastName": "Davis",
+    "dob": "2000-02-14T00:00:00.000Z",
+    "sex": "F",
+    "phone": "555-0401",
+    "email": "emily.davis@email.com",
+    "address": "321 Elm St, Nowhere, USA",
+    "emergencyContact": {
+      "name": "Robert Davis",
+      "phone": "555-0402",
+      "relationship": "Father"
+    },
+    "allergies": [
+      "Peanuts"
+    ],
+    "insurance": {
+      "provider": "United Healthcare",
+      "policyNumber": "UHC901234",
+      "groupNumber": "GRP004"
+    },
+    "status": "Active",
+    "createdAt": "2025-08-15T16:20:00.000Z",
+    "updatedAt": "2025-08-15T16:20:00.000Z"
+  },
+  {
+    "_id": "1756190000005",
+    "firstName": "Robert",
+    "lastName": "Wilson",
+    "dob": "1965-09-30T00:00:00.000Z",
+    "sex": "M",
+    "phone": "555-0501",
+    "email": "robert.wilson@email.com",
+    "address": "654 Maple Dr, Anywhere, USA",
+    "emergencyContact": {
+      "name": "Mary Wilson",
+      "phone": "555-0502",
+      "relationship": "Wife"
+    },
+    "allergies": [
+      "Aspirin"
+    ],
+    "insurance": {
+      "provider": "Medicare",
+      "policyNumber": "MED567890",
+      "groupNumber": "GRP005"
+    },
+    "status": "Active",
+    "createdAt": "2025-08-20T11:10:00.000Z",
+    "updatedAt": "2025-08-20T11:10:00.000Z"
+  },
+  {
+    "_id": "1756190000006",
+    "firstName": "Lisa",
+    "lastName": "Anderson",
+    "dob": "1988-12-03T00:00:00.000Z",
+    "sex": "F",
+    "phone": "555-0601",
+    "email": "lisa.anderson@email.com",
+    "address": "987 Cedar Ln, Someplace, USA",
+    "emergencyContact": {
+      "name": "Tom Anderson",
+      "phone": "555-0602",
+      "relationship": "Husband"
+    },
+    "allergies": [],
+    "insurance": {
+      "provider": "Humana",
+      "policyNumber": "HUM123789",
+      "groupNumber": "GRP006"
+    },
+    "status": "Active",
+    "createdAt": "2025-08-22T13:30:00.000Z",
+    "updatedAt": "2025-08-22T13:30:00.000Z"
+  },
+  {
+    "_id": "1756306943422",
+    "firstName": "Yakubu",
+    "lastName": "Rashid",
+    "dob": "1998-07-27T00:00:00.000Z",
+    "sex": "M",
+    "phone": "0243456789",
+    "email": "yrashid@gmail.com",
+    "address": "bl3344 Tamale-Ghana\nP.O BOX 111 Tamale-Ghana",
+    "emergencyContact": {
+      "name": "Yakubu Abdul Rashid",
+      "phone": "0551234567",
+      "relationship": "Brother"
+    },
+    "medicalHistory": [],
+    "allergies": [
+      "Peanuts",
+      "Black Peas"
+    ],
+    "medications": [],
+    "vitals": [],
+    "insurance": {
+      "provider": "NHIS",
+      "policyNumber": "1234567890",
+      "groupNumber": "NHIS Scheme12345"
+    },
+    "status": "Active",
+    "createdAt": "2025-08-27T15:02:23.422Z",
+    "updatedAt": "2025-08-27T15:02:23.423Z"
+  }
+]

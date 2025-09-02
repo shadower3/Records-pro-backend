@@ -1,0 +1,122 @@
+[
+  {
+    "id": "1756188845014",
+    "name": "Admin User 1",
+    "email": "admin@hospital.com",
+    "passwordHash": "$2a$10$eRb8YLZ2fI1zlZYTBDLfhet3VhzPQJs9WZc5p7NLYT/Gjkk876Ae.",
+    "role": "admin",
+    "phone": "",
+    "department": "administration",
+    "settings": {
+      "notifications": {
+        "emailNotifications": true,
+        "pushNotifications": true,
+        "patientUpdates": true,
+        "systemAlerts": true
+      },
+      "security": {
+        "twoFactorAuth": false,
+        "sessionTimeout": "60",
+        "passwordExpiry": "90"
+      },
+      "system": {
+        "theme": "light",
+        "language": "es",
+        "timezone": "UTC",
+        "dateFormat": "dd/MM/yyyy"
+      }
+    },
+    "createdAt": "2025-08-26T06:14:05.014Z",
+    "updatedAt": "2025-08-27T21:15:29.194Z"
+  },
+  {
+    "id": "1756188845112",
+    "name": "Dr. Smith 1",
+    "email": "doctor@hospital.com",
+    "passwordHash": "$2a$10$ino7nLfBR8/nOxxWOckl4eCHFvjbwX6a/aACvdoHnMqjmV4U5i4V2",
+    "role": "doctor",
+    "phone": "",
+    "department": "",
+    "settings": {
+      "notifications": {
+        "emailNotifications": true,
+        "pushNotifications": true,
+        "patientUpdates": true,
+        "systemAlerts": false
+      },
+      "security": {
+        "twoFactorAuth": false,
+        "sessionTimeout": "30",
+        "passwordExpiry": "90"
+      },
+      "system": {
+        "theme": "light",
+        "language": "en",
+        "timezone": "UTC",
+        "dateFormat": "MM/dd/yyyy"
+      }
+    },
+    "createdAt": "2025-08-26T06:14:05.112Z",
+    "updatedAt": "2025-08-26T10:43:18.636Z"
+  },
+  {
+    "id": "1756188845228",
+    "name": "Nurse Johnson",
+    "email": "nurse@hospital.com",
+    "passwordHash": "$2a$10$ZzQZb6q0ewIsIaLa.uTaJuegNrMTrMbS7jfk4TC46ygfu5LByrPVG",
+    "role": "nurse",
+    "phone": "",
+    "department": "",
+    "settings": {
+      "notifications": {
+        "emailNotifications": true,
+        "pushNotifications": true,
+        "patientUpdates": true,
+        "systemAlerts": false
+      },
+      "security": {
+        "twoFactorAuth": false,
+        "sessionTimeout": "30",
+        "passwordExpiry": "90"
+      },
+      "system": {
+        "theme": "light",
+        "language": "en",
+        "timezone": "UTC",
+        "dateFormat": "MM/dd/yyyy"
+      }
+    },
+    "createdAt": "2025-08-26T06:14:05.228Z",
+    "updatedAt": "2025-08-26T06:14:05.229Z"
+  },
+  {
+    "id": "1756205301821",
+    "name": "Yakubu Hafiz",
+    "email": "yhafiz@outlook.com",
+    "passwordHash": "$2a$10$o.n.MFpoTZcE81Pr2wQoguz/3MKd3Ednj7qHDUKeCATOdav4M5Y46",
+    "role": "doctor",
+    "phone": "",
+    "department": "",
+    "settings": {
+      "notifications": {
+        "emailNotifications": true,
+        "pushNotifications": true,
+        "patientUpdates": true,
+        "systemAlerts": false
+      },
+      "security": {
+        "twoFactorAuth": false,
+        "sessionTimeout": "30",
+        "passwordExpiry": "90"
+      },
+      "system": {
+        "theme": "light",
+        "language": "en",
+        "timezone": "UTC",
+        "dateFormat": "MM/dd/yyyy"
+      }
+    },
+    "createdAt": "2025-08-26T10:48:21.821Z",
+    "updatedAt": "2025-08-26T10:48:21.822Z"
+  }
+]
