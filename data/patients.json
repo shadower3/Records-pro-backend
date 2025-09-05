@@ -1,6 +1,50 @@
 [
   {
     "_id": "1756190000001",
+    "patientDetails": {
+      "firstName": "John",
+      "lastName": "Doe",
+      "dob": "1985-03-15T00:00:00.000Z",
+      "sex": "M",
+      "phone": "555-0101",
+      "email": "john.doe@email.com",
+      "address": "123 Main St, Anytown, USA",
+      "emergencyContact": {
+        "name": "Jane Doe",
+        "phone": "555-0102",
+        "relationship": "Spouse"
+      },
+      "insurance": {
+        "provider": "Blue Cross",
+        "policyNumber": "BC123456",
+        "groupNumber": "GRP001"
+      },
+      "recordStatus": "Inactive"
+    },
+    "medicalRecords": {
+      "medicalHistory": [
+        {
+          "date": "2025-07-15",
+          "description": "Annual physical exam - all vitals normal, recommended dietary improvements"
+        },
+        {
+          "date": "2025-06-10",
+          "description": "Follow-up for hypertension - blood pressure stable, continuing current medication"
+        }
+      ],
+      "allergies": [
+        "Penicillin",
+        "Shellfish"
+      ],
+      "medications": [],
+      "vitals": [],
+      "diagnoses": [],
+      "treatments": [],
+      "labResults": [],
+      "prescriptions": [],
+      "patientStatus": "Discharged",
+      "admissionStatus": "Discharged"
+    },
     "firstName": "John",
     "lastName": "Doe",
     "dob": "1985-03-15T00:00:00.000Z",
@@ -13,21 +57,56 @@
       "phone": "555-0102",
       "relationship": "Spouse"
     },
-    "allergies": [
-      "Penicillin",
-      "Shellfish"
-    ],
     "insurance": {
       "provider": "Blue Cross",
       "policyNumber": "BC123456",
       "groupNumber": "GRP001"
     },
-    "status": "Active",
+    "status": "Inactive",
     "createdAt": "2025-08-01T10:30:00.000Z",
-    "updatedAt": "2025-08-01T10:30:00.000Z"
+    "updatedAt": "2025-09-04T22:20:41.648Z"
   },
   {
     "_id": "1756190000002",
+    "patientDetails": {
+      "firstName": "Sarah",
+      "lastName": "Johnson",
+      "dob": "1992-07-22T00:00:00.000Z",
+      "sex": "F",
+      "phone": "555-0201",
+      "email": "sarah.johnson@email.com",
+      "address": "456 Oak Ave, Somewhere, USA",
+      "emergencyContact": {
+        "name": "Mike Johnson",
+        "phone": "555-0202",
+        "relationship": "Brother"
+      },
+      "insurance": {
+        "provider": "Aetna",
+        "policyNumber": "AET789012",
+        "groupNumber": "GRP002"
+      },
+      "recordStatus": "Inactive"
+    },
+    "medicalRecords": {
+      "medicalHistory": [
+        {
+          "date": "2025-08-01",
+          "description": "Routine gynecological exam - normal results, scheduled follow-up in 6 months"
+        }
+      ],
+      "allergies": [
+        "Latex"
+      ],
+      "medications": [],
+      "vitals": [],
+      "diagnoses": [],
+      "treatments": [],
+      "labResults": [],
+      "prescriptions": [],
+      "patientStatus": "Discharged",
+      "admissionStatus": "Discharged"
+    },
     "firstName": "Sarah",
     "lastName": "Johnson",
     "dob": "1992-07-22T00:00:00.000Z",
@@ -40,20 +119,62 @@
       "phone": "555-0202",
       "relationship": "Brother"
     },
-    "allergies": [
-      "Latex"
-    ],
     "insurance": {
       "provider": "Aetna",
       "policyNumber": "AET789012",
       "groupNumber": "GRP002"
     },
-    "status": "Active",
+    "status": "Inactive",
     "createdAt": "2025-08-05T14:15:00.000Z",
-    "updatedAt": "2025-08-05T14:15:00.000Z"
+    "updatedAt": "2025-09-04T22:17:59.571Z"
   },
   {
     "_id": "1756190000003",
+    "patientDetails": {
+      "firstName": "Michael",
+      "lastName": "Brown",
+      "dob": "1978-11-08T00:00:00.000Z",
+      "sex": "M",
+      "phone": "555-0301",
+      "email": "michael.brown@email.com",
+      "address": "789 Pine St, Elsewhere, USA",
+      "emergencyContact": {
+        "name": "Lisa Brown",
+        "phone": "555-0302",
+        "relationship": "Wife"
+      },
+      "insurance": {
+        "provider": "Cigna",
+        "policyNumber": "CIG345678",
+        "groupNumber": "GRP003"
+      },
+      "recordStatus": "Inactive"
+    },
+    "medicalRecords": {
+      "vitals": [
+        {
+          "type": "Heart Rate",
+          "value": "ojpo",
+          "unit": "00-",
+          "date": "2025-09-04"
+        },
+        {
+          "type": "Heart Rate",
+          "value": "nnkl",
+          "unit": "dtgehhg",
+          "date": "2025-09-04"
+        }
+      ],
+      "patientStatus": "Discharge",
+      "allergies": [],
+      "medicalHistory": [],
+      "medications": [],
+      "diagnoses": [],
+      "treatments": [],
+      "labResults": [],
+      "prescriptions": [],
+      "admissionStatus": "Discharged"
+    },
     "firstName": "Michael",
     "lastName": "Brown",
     "dob": "1978-11-08T00:00:00.000Z",
@@ -66,18 +187,66 @@
       "phone": "555-0302",
       "relationship": "Wife"
     },
-    "allergies": [],
     "insurance": {
       "provider": "Cigna",
       "policyNumber": "CIG345678",
       "groupNumber": "GRP003"
     },
-    "status": "Active",
+    "status": "Inactive",
     "createdAt": "2025-08-10T09:45:00.000Z",
-    "updatedAt": "2025-08-10T09:45:00.000Z"
+    "updatedAt": "2025-09-05T06:58:17.589Z"
   },
   {
     "_id": "1756190000004",
+    "patientDetails": {
+      "firstName": "Emily",
+      "lastName": "Davis",
+      "dob": "2000-02-14T00:00:00.000Z",
+      "sex": "F",
+      "phone": "555-0401",
+      "email": "emily.davis@email.com",
+      "address": "321 Elm St, Nowhere, USA",
+      "emergencyContact": {
+        "name": "Robert Davis",
+        "phone": "555-0402",
+        "relationship": "Father"
+      },
+      "insurance": {
+        "provider": "United Healthcare",
+        "policyNumber": "UHC901234",
+        "groupNumber": "GRP004"
+      },
+      "recordStatus": "Active"
+    },
+    "medicalRecords": {
+      "vitals": [
+        {
+          "type": "Temperature",
+          "value": "44",
+          "unit": "C",
+          "date": "2025-09-05"
+        }
+      ],
+      "patientStatus": "Admit",
+      "allergies": [
+        "peas"
+      ],
+      "medicalHistory": [],
+      "medications": [
+        {
+          "name": "Penicul 300mg",
+          "dosage": "3tabs",
+          "frequency": "3x",
+          "startDate": "2025-09-05",
+          "endDate": "2025-09-20"
+        }
+      ],
+      "diagnoses": [],
+      "treatments": [],
+      "labResults": [],
+      "prescriptions": [],
+      "admissionStatus": "Discharged"
+    },
     "firstName": "Emily",
     "lastName": "Davis",
     "dob": "2000-02-14T00:00:00.000Z",
@@ -90,9 +259,6 @@
       "phone": "555-0402",
       "relationship": "Father"
     },
-    "allergies": [
-      "Peanuts"
-    ],
     "insurance": {
       "provider": "United Healthcare",
       "policyNumber": "UHC901234",
@@ -100,10 +266,43 @@
     },
     "status": "Active",
     "createdAt": "2025-08-15T16:20:00.000Z",
-    "updatedAt": "2025-08-15T16:20:00.000Z"
+    "updatedAt": "2025-09-05T07:02:35.972Z"
   },
   {
     "_id": "1756190000005",
+    "patientDetails": {
+      "firstName": "Robert",
+      "lastName": "Wilson",
+      "dob": "1965-09-30T00:00:00.000Z",
+      "sex": "M",
+      "phone": "555-0501",
+      "email": "robert.wilson@email.com",
+      "address": "654 Maple Dr, Anywhere, USA",
+      "emergencyContact": {
+        "name": "Mary Wilson",
+        "phone": "555-0502",
+        "relationship": "Wife"
+      },
+      "insurance": {
+        "provider": "Medicare",
+        "policyNumber": "MED567890",
+        "groupNumber": "GRP005"
+      },
+      "recordStatus": "Active"
+    },
+    "medicalRecords": {
+      "medicalHistory": [],
+      "allergies": [
+        "Aspirin"
+      ],
+      "medications": [],
+      "vitals": [],
+      "diagnoses": [],
+      "treatments": [],
+      "labResults": [],
+      "prescriptions": [],
+      "patientStatus": "Observation"
+    },
     "firstName": "Robert",
     "lastName": "Wilson",
     "dob": "1965-09-30T00:00:00.000Z",
@@ -116,9 +315,6 @@
       "phone": "555-0502",
       "relationship": "Wife"
     },
-    "allergies": [
-      "Aspirin"
-    ],
     "insurance": {
       "provider": "Medicare",
       "policyNumber": "MED567890",
@@ -126,15 +322,63 @@
     },
     "status": "Active",
     "createdAt": "2025-08-20T11:10:00.000Z",
-    "updatedAt": "2025-08-20T11:10:00.000Z"
+    "updatedAt": "2025-09-05T03:46:46.935Z"
   },
   {
     "_id": "1756190000006",
+    "patientDetails": {
+      "firstName": "Lisa",
+      "lastName": "Anderson 1",
+      "dob": "1988-12-03T00:00:00.000Z",
+      "sex": "F",
+      "phone": "555-060",
+      "email": "lisa.anderson@email.com",
+      "address": "987 Cedar Ln, Someplace, USA",
+      "emergencyContact": {
+        "name": "Tom Anderson",
+        "phone": "555-0602",
+        "relationship": "Husband"
+      },
+      "insurance": {
+        "provider": "Humana",
+        "policyNumber": "HUM123789",
+        "groupNumber": "GRP006"
+      },
+      "recordStatus": "Active"
+    },
+    "medicalRecords": {
+      "medicalHistory": [],
+      "allergies": [],
+      "medications": [],
+      "vitals": [],
+      "diagnoses": [],
+      "treatments": [],
+      "labResults": [
+        {
+          "test": "thghhg",
+          "result": "hggfhfh",
+          "unit": "ghgfhgfh",
+          "date": "2025-09-03",
+          "normalRange": "ghghgfh"
+        }
+      ],
+      "prescriptions": [
+        {
+          "medication": "thftf",
+          "dosage": "tfhfh",
+          "frequency": "thfth",
+          "duration": "thf",
+          "prescribedBy": "fthtff",
+          "date": "2025-09-03"
+        }
+      ],
+      "patientStatus": "Transferred"
+    },
     "firstName": "Lisa",
-    "lastName": "Anderson",
+    "lastName": "Anderson 1",
     "dob": "1988-12-03T00:00:00.000Z",
     "sex": "F",
-    "phone": "555-0601",
+    "phone": "555-060",
     "email": "lisa.anderson@email.com",
     "address": "987 Cedar Ln, Someplace, USA",
     "emergencyContact": {
@@ -142,7 +386,6 @@
       "phone": "555-0602",
       "relationship": "Husband"
     },
-    "allergies": [],
     "insurance": {
       "provider": "Humana",
       "policyNumber": "HUM123789",
@@ -154,6 +397,41 @@
   },
   {
     "_id": "1756306943422",
+    "patientDetails": {
+      "firstName": "Yakubu",
+      "lastName": "Rashid",
+      "dob": "1998-07-27T00:00:00.000Z",
+      "sex": "M",
+      "phone": "0243456789",
+      "email": "yrashid@gmail.com",
+      "address": "bl3344 Tamale-Ghana\nP.O BOX 111 Tamale-Ghana",
+      "emergencyContact": {
+        "name": "Yakubu Abdul Rashid",
+        "phone": "0551234567",
+        "relationship": "Brother"
+      },
+      "insurance": {
+        "provider": "NHIS",
+        "policyNumber": "1234567890",
+        "groupNumber": "NHIS Scheme12345"
+      },
+      "recordStatus": "Inactive"
+    },
+    "medicalRecords": {
+      "medicalHistory": [],
+      "allergies": [
+        "Peanuts",
+        "Black Peas"
+      ],
+      "medications": [],
+      "vitals": [],
+      "diagnoses": [],
+      "treatments": [],
+      "labResults": [],
+      "prescriptions": [],
+      "patientStatus": "Admitted",
+      "admissionStatus": "Discharged"
+    },
     "firstName": "Yakubu",
     "lastName": "Rashid",
     "dob": "1998-07-27T00:00:00.000Z",
@@ -166,20 +444,364 @@
       "phone": "0551234567",
       "relationship": "Brother"
     },
-    "medicalHistory": [],
-    "allergies": [
-      "Peanuts",
-      "Black Peas"
-    ],
-    "medications": [],
-    "vitals": [],
     "insurance": {
       "provider": "NHIS",
       "policyNumber": "1234567890",
       "groupNumber": "NHIS Scheme12345"
     },
-    "status": "Active",
+    "status": "Inactive",
     "createdAt": "2025-08-27T15:02:23.422Z",
-    "updatedAt": "2025-08-27T15:02:23.423Z"
+    "updatedAt": "2025-09-04T22:16:32.858Z"
+  },
+  {
+    "_id": "1756826440387",
+    "patientDetails": {
+      "firstName": "Dayunaa",
+      "lastName": "Omo Oga",
+      "dob": "1996-07-12",
+      "sex": "M",
+      "phone": "555 6576",
+      "email": "dayunaa@gmail.com",
+      "address": "Nakpanzoo Block D 3655D",
+      "emergencyContact": {
+        "name": "Dawulana ",
+        "phone": "555 7890",
+        "relationship": "Brother"
+      },
+      "insurance": {
+        "provider": "Nanuna Insurance",
+        "policyNumber": "12346766",
+        "groupNumber": "Gr365431"
+      },
+      "recordStatus": "Inactive"
+    },
+    "medicalRecords": {
+      "medicalHistory": [
+        {
+          "date": "2025-09-01",
+          "description": "Ulcer Patient with Perforated colon, yuhyuh67h6tuhuj6uj6ujuj6uj6yujyujyjiku,kukoo,56ybyfd"
+        },
+        {
+          "date": "",
+          "description": "Diabetes, Anaemia"
+        }
+      ],
+      "allergies": [
+        "Peanuts, Tiger nuts"
+      ],
+      "medications": [],
+      "vitals": [],
+      "diagnoses": [],
+      "treatments": [],
+      "labResults": [],
+      "prescriptions": [],
+      "patientStatus": "Admitted",
+      "admissionStatus": "Discharged"
+    },
+    "firstName": "Dayunaa",
+    "lastName": "Omo Oga",
+    "dob": "1996-07-12",
+    "sex": "M",
+    "phone": "555 6576",
+    "email": "dayunaa@gmail.com",
+    "address": "Nakpanzoo Block D 3655D",
+    "emergencyContact": {
+      "name": "Dawulana ",
+      "phone": "555 7890",
+      "relationship": "Brother"
+    },
+    "insurance": {
+      "provider": "Nanuna Insurance",
+      "policyNumber": "12346766",
+      "groupNumber": "Gr365431"
+    },
+    "status": "Inactive",
+    "createdAt": "2025-09-02T15:20:40.387Z",
+    "updatedAt": "2025-09-05T07:11:11.356Z"
+  },
+  {
+    "_id": "1756998157459",
+    "patientDetails": {
+      "firstName": "Yakubu",
+      "lastName": "Manan",
+      "dob": "2005-07-07",
+      "sex": "M",
+      "phone": "0557844584g",
+      "email": "manan@gmail.com",
+      "address": "Nyohini Block C",
+      "emergencyContact": {
+        "name": "Mark Dickson Gawani",
+        "phone": "02434567",
+        "relationship": ""
+      },
+      "insurance": {
+        "provider": "NHIS",
+        "policyNumber": "556567890",
+        "groupNumber": "GRP006"
+      },
+      "recordStatus": "Active",
+      "folderNumber": "p457"
+    },
+    "medicalRecords": {
+      "medicalHistory": [],
+      "allergies": [],
+      "medications": [],
+      "vitals": [],
+      "diagnoses": [],
+      "treatments": [],
+      "labResults": [],
+      "prescriptions": [],
+      "patientStatus": "Admitted"
+    },
+    "firstName": "Yakubu",
+    "lastName": "Manan",
+    "dob": "2005-07-07",
+    "sex": "M",
+    "phone": "0557844584g",
+    "email": "manan@gmail.com",
+    "address": "Nyohini Block C",
+    "emergencyContact": {
+      "name": "Mark Dickson Gawani",
+      "phone": "02434567",
+      "relationship": ""
+    },
+    "insurance": {
+      "provider": "NHIS",
+      "policyNumber": "556567890",
+      "groupNumber": "GRP006"
+    },
+    "status": "Active",
+    "folderNumber": "p457",
+    "createdAt": "2025-09-04T15:02:37.459Z",
+    "updatedAt": "2025-09-04T22:23:54.673Z"
+  },
+  {
+    "_id": "1756998588159",
+    "patientDetails": {
+      "firstName": "Mark",
+      "lastName": "Rashida",
+      "dob": "2009-06-11",
+      "sex": "F",
+      "phone": "05412348477",
+      "email": "sample2@email.com",
+      "address": "Zujung village water 333",
+      "emergencyContact": {
+        "name": "Mark Dickson Gawani",
+        "phone": "02434567",
+        "relationship": "Brother"
+      },
+      "insurance": {
+        "provider": "NHIS",
+        "policyNumber": "12346767",
+        "groupNumber": "GRP007"
+      },
+      "recordStatus": "Active",
+      "folderNumber": "p456"
+    },
+    "medicalRecords": {
+      "vitals": [
+        {
+          "type": "Heart Rate",
+          "value": "lll",
+          "unit": "llj",
+          "date": "2025-09-04"
+        }
+      ],
+      "patientStatus": "Critical",
+      "medicalHistory": [
+        {
+          "date": "",
+          "description": "rrrgdfff",
+          "provider": "dr. Smith"
+        }
+      ],
+      "allergies": [
+        "rats"
+      ],
+      "medications": [
+        {
+          "name": "eeeefdgfdg",
+          "dosage": "dffgf",
+          "frequency": "fdgfd",
+          "startDate": "2025-09-04",
+          "endDate": "2025-09-20"
+        }
+      ],
+      "treatments": [
+        {
+          "treatment": "jol",
+          "date": "2025-09-04",
+          "provider": "lll",
+          "notes": "lll"
+        }
+      ],
+      "diagnoses": [
+        {
+          "condition": "ll",
+          "date": "2025-09-04",
+          "severity": "Mild",
+          "notes": "lll"
+        }
+      ],
+      "labResults": [
+        {
+          "test": "l",
+          "result": "lj",
+          "unit": "jj",
+          "date": "2025-09-04",
+          "normalRange": "jl;j"
+        }
+      ],
+      "prescriptions": [
+        {
+          "medication": "l;ll",
+          "dosage": "lj;",
+          "frequency": "l;",
+          "duration": "l;",
+          "prescribedBy": "jl;",
+          "date": "2025-09-04"
+        },
+        {
+          "medication": "Paracetamol",
+          "dosage": "2 tabs",
+          "frequency": "3x ",
+          "duration": "two weeks",
+          "prescribedBy": "",
+          "date": "2025-09-04"
+        }
+      ],
+      "admissionStatus": "Admitted"
+    },
+    "firstName": "Mark",
+    "lastName": "Rashida",
+    "dob": "2009-06-11",
+    "sex": "F",
+    "phone": "05412348477",
+    "email": "sample2@email.com",
+    "address": "Zujung village water 333",
+    "emergencyContact": {
+      "name": "Mark Dickson Gawani",
+      "phone": "02434567",
+      "relationship": "Brother"
+    },
+    "insurance": {
+      "provider": "NHIS",
+      "policyNumber": "12346767",
+      "groupNumber": "GRP007"
+    },
+    "status": "Active",
+    "folderNumber": "p456",
+    "createdAt": "2025-09-04T15:09:48.159Z",
+    "updatedAt": "2025-09-04T22:23:05.797Z"
+  },
+  {
+    "_id": "1757029448415",
+    "patientDetails": {
+      "firstName": "Mark",
+      "lastName": "Rashidatu",
+      "dob": "2005-02-10",
+      "sex": "M",
+      "phone": "0557844889",
+      "email": "sample2@email.com",
+      "address": "Zimbila Fong BLK A",
+      "emergencyContact": {
+        "name": "Mark Dickson Gawani",
+        "phone": "02434567",
+        "relationship": "friend"
+      },
+      "insurance": {
+        "provider": "NHIS",
+        "policyNumber": "123467661",
+        "groupNumber": "GRP006"
+      },
+      "recordStatus": "Active"
+    },
+    "medicalRecords": {
+      "vitals": [],
+      "patientStatus": "Admitted"
+    },
+    "firstName": "Mark",
+    "lastName": "Rashidatu",
+    "dob": "2005-02-10",
+    "sex": "M",
+    "phone": "0557844889",
+    "email": "sample2@email.com",
+    "address": "Zimbila Fong BLK A",
+    "emergencyContact": {
+      "name": "Mark Dickson Gawani",
+      "phone": "02434567",
+      "relationship": "friend"
+    },
+    "insurance": {
+      "provider": "NHIS",
+      "policyNumber": "123467661",
+      "groupNumber": "GRP006"
+    },
+    "status": "Active",
+    "createdAt": "2025-09-04T23:44:08.415Z",
+    "updatedAt": "2025-09-05T04:03:41.761Z"
+  },
+  {
+    "_id": "1757029624070",
+    "patientDetails": {
+      "firstName": "Lisa",
+      "lastName": "Manan prop",
+      "dob": "2004-06-09",
+      "sex": "M",
+      "phone": "555 646512",
+      "email": "sample2@email.com",
+      "address": "nyohini Yapala BLK Z1",
+      "emergencyContact": {
+        "name": "Tom Anderson",
+        "phone": "555 78902",
+        "relationship": "friend"
+      },
+      "insurance": {
+        "provider": "Nanuna Insurance",
+        "policyNumber": "HUM123789",
+        "groupNumber": "GRP00844"
+      },
+      "recordStatus": "Active",
+      "folderNumber": "p4588"
+    },
+    "medicalRecords": {
+      "medicalHistory": [
+        {
+          "date": "2025-09-19",
+          "description": "fgfjhkhgfdfghjfgvbhnmb",
+          "provider": "Dr Smith"
+        }
+      ],
+      "allergies": [],
+      "medications": [],
+      "vitals": [],
+      "diagnoses": [],
+      "treatments": [],
+      "labResults": [],
+      "prescriptions": [],
+      "patientStatus": "Transfer",
+      "admissionStatus": "Admitted"
+    },
+    "firstName": "Lisa",
+    "lastName": "Manan prop",
+    "dob": "2004-06-09",
+    "sex": "M",
+    "phone": "555 646512",
+    "email": "sample2@email.com",
+    "address": "nyohini Yapala BLK Z1",
+    "emergencyContact": {
+      "name": "Tom Anderson",
+      "phone": "555 78902",
+      "relationship": "friend"
+    },
+    "insurance": {
+      "provider": "Nanuna Insurance",
+      "policyNumber": "HUM123789",
+      "groupNumber": "GRP00844"
+    },
+    "status": "Active",
+    "folderNumber": "p4588",
+    "createdAt": "2025-09-04T23:47:04.070Z",
+    "updatedAt": "2025-09-05T03:45:38.928Z"
   }
 ]

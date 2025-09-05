@@ -18,7 +18,7 @@ router.get('/patients', requireAuth, requireRole(['admin', 'doctor']), getPatien
 // User activity reports - admin only
 router.get('/users', requireAuth, requireRole(['admin']), getUserActivityReport);
 
-// Export functionality - admin and doctors
-router.get('/export/patients', requireAuth, requireRole(['admin', 'doctor']), exportPatientData);
+// Export functionality - admin only
+router.get('/export/patients', requireAuth, requireRole(['admin']), exportPatientData);
 
 export default router;

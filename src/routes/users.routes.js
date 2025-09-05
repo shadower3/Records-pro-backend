@@ -1,9 +1,10 @@
 import { Router } from 'express';
 import { requireAuth, requireRole } from '../middleware/auth.js';
 import {
-  list,
-  getById,
-  update,
+  getUsers,
+  createUser,
+  updateUser,
+  resetUserPassword,
   deleteUser,
   updateProfile,
   updateSettings,
@@ -18,9 +19,10 @@ router.put('/me/profile', requireAuth, updateProfile);
 router.put('/me/settings', requireAuth, updateSettings);
 
 // Admin-only user management routes - these come after specific routes
-router.get('/', requireAuth, requireRole(['admin']), list);
-router.get('/:id', requireAuth, requireRole(['admin']), getById);
-router.put('/:id', requireAuth, requireRole(['admin']), update);
+router.get('/', requireAuth, requireRole(['admin']), getUsers);
+router.post('/', requireAuth, requireRole(['admin']), createUser);
+router.put('/:id', requireAuth, requireRole(['admin']), updateUser);
+router.put('/:id/reset-password', requireAuth, requireRole(['admin']), resetUserPassword);
 router.delete('/:id', requireAuth, requireRole(['admin']), deleteUser);
 
 export default router;

@@ -3,79 +3,92 @@ import User from '../models/User.js';
 
 export async function getDashboardStats(req, res) {
   try {
+    // Get all patients first for calculations
+    const allPatients = await Patient.find();
+
     const totalPatients = await Patient.countDocuments();
     const totalUsers = await User.countDocuments();
-    
+
     // Patients registered in the last 30 days
     const thirtyDaysAgo = new Date();
     thirtyDaysAgo.setDate(thirtyDaysAgo.getDate() - 30);
-    const recentPatients = await Patient.countDocuments({
-      createdAt: { $gte: thirtyDaysAgo }
-    });
-    
-    // Gender distribution
-    const genderStats = await Patient.aggregate([
-      {
-        $group: {
-          _id: '$sex',
-          count: { $sum: 1 }
-        }
+    const recentPatients = allPatients.filter(patient =>
+      new Date(patient.createdAt) >= thirtyDaysAgo
+    ).length;
+
+    // Gender distribution - using file-based approach
+    const genderCount = {};
+    allPatients.forEach(patient => {
+      // Check both nested and root level sex fields
+      let sex = patient.patientDetails?.sex || patient.sex;
+
+      // Normalize the values
+      if (sex === 'M' || sex === 'Male') {
+        sex = 'M';
+      } else if (sex === 'F' || sex === 'Female') {
+        sex = 'F';
+      } else {
+        sex = 'Other';
       }
-    ]);
-    
-    // Age distribution
-    const ageStats = await Patient.aggregate([
-      {
-        $addFields: {
-          age: {
-            $floor: {
-              $divide: [
-                { $subtract: [new Date(), '$dob'] },
-                365.25 * 24 * 60 * 60 * 1000
-              ]
-            }
-          }
-        }
-      },
-      {
-        $group: {
-          _id: {
-            $switch: {
-              branches: [
-                { case: { $lt: ['$age', 18] }, then: '0-17' },
-                { case: { $lt: ['$age', 30] }, then: '18-29' },
-                { case: { $lt: ['$age', 50] }, then: '30-49' },
-                { case: { $lt: ['$age', 70] }, then: '50-69' },
-              ],
-              default: '70+'
-            }
-          },
-          count: { $sum: 1 }
-        }
-      },
-      { $sort: { _id: 1 } }
-    ]);
-    
-    // Monthly registration trends (last 12 months)
-    const monthlyStats = await Patient.aggregate([
-      {
-        $match: {
-          createdAt: {
-            $gte: new Date(new Date().setMonth(new Date().getMonth() - 12))
-          }
-        }
-      },
-      {
-        $group: {
-          _id: {
-            year: { $year: '$createdAt' },
-            month: { $month: '$createdAt' }
-          },
-          count: { $sum: 1 }
-        }
-      },
-      { $sort: { '_id.year': 1, '_id.month': 1 } }
-    ]);
+
+      genderCount[sex] = (genderCount[sex] || 0) + 1;
+    });
+
+    const genderStats = Object.entries(genderCount)
+      .filter(([sex, count]) => count > 0)
+      .map(([sex, count]) => ({
+        _id: sex,
+        count
+      }));
+
+    console.log('Gender distribution data:', genderStats);
+
+    // Age distribution - using file-based approach
+    const ageGroups = { '0-17': 0, '18-29': 0, '30-49': 0, '50-69': 0, '70+': 0 };
+    allPatients.forEach(patient => {
+      const dob = patient.patientDetails?.dob || patient.dob;
+      if (dob) {
+        const age = Math.floor((new Date() - new Date(dob)) / (365.25 * 24 * 60 * 60 * 1000));
+        if (age < 18) ageGroups['0-17']++;
+        else if (age < 30) ageGroups['18-29']++;
+        else if (age < 50) ageGroups['30-49']++;
+        else if (age < 70) ageGroups['50-69']++;
+        else ageGroups['70+']++;
+      }
+    });
+    const ageStats = Object.entries(ageGroups)
+      .filter(([group, count]) => count > 0)
+      .map(([group, count]) => ({
+        _id: group,
+        count
+      }))
+      .sort((a, b) => a._id.localeCompare(b._id));
+
+    // Monthly registration trends - using file-based approach
+    const twelveMonthsAgo = new Date();
+    twelveMonthsAgo.setMonth(twelveMonthsAgo.getMonth() - 12);
+
+    const monthlyCount = {};
+    allPatients
+      .filter(patient => new Date(patient.createdAt) >= twelveMonthsAgo)
+      .forEach(patient => {
+        const date = new Date(patient.createdAt);
+        const key = `${date.getFullYear()}-${String(date.getMonth() + 1).padStart(2, '0')}`;
+        monthlyCount[key] = (monthlyCount[key] || 0) + 1;
+      });
+
+    const monthlyStats = Object.entries(monthlyCount)
+      .map(([key, count]) => {
+        const [year, month] = key.split('-');
+        return {
+          _id: { year: parseInt(year), month: parseInt(month) },
+          count
+        };
+      })
+      .sort((a, b) => {
+        if (a._id.year !== b._id.year) return a._id.year - b._id.year;
+        return a._id.month - b._id.month;
+      });
     
     res.json({
       totalPatients,
@@ -201,13 +214,16 @@ export async function exportPatientData(req, res) {
 
     if (format === 'csv') {
       // Convert to CSV format
-      const csvHeader = 'First Name,Last Name,Date of Birth,Gender,Phone,Address,Allergies,Created At\n';
+      const csvHeader = 'First Name,Last Name,Date of Birth,Gender,Phone,Address,Allergies,Medical History,Created At\n';
       const csvData = patients.map(p => {
         const dob = p.dob ? new Date(p.dob).toISOString().split('T')[0] : '';
         const allergies = Array.isArray(p.allergies) ? p.allergies.join('; ') : '';
+        const medicalHistory = Array.isArray(p.medicalHistory) 
+          ? p.medicalHistory.map(h => `${h.date}: ${h.description}`).join('; ') 
+          : '';
         const createdAt = new Date(p.createdAt).toISOString().split('T')[0];
 
-        return `"${p.firstName || ''}","${p.lastName || ''}","${dob}","${p.sex || ''}","${p.phone || ''}","${p.address || ''}","${allergies}","${createdAt}"`;
+        return `"${p.firstName || ''}","${p.lastName || ''}","${dob}","${p.sex || ''}","${p.phone || ''}","${p.address || ''}","${allergies}","${medicalHistory}","${createdAt}"`;
       }).join('\n');
 
       res.setHeader('Content-Type', 'text/csv');
@@ -223,6 +239,7 @@ export async function exportPatientData(req, res) {
         phone: p.phone,
         address: p.address,
         allergies: p.allergies,
+        medicalHistory: p.medicalHistory,
         createdAt: p.createdAt
       }));
       res.json(exportData);

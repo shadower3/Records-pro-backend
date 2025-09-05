@@ -1,9 +1,2 @@
-import mongoose from 'mongoose';
-import dotenv from 'dotenv';
-dotenv.config();
-
-const uri = process.env.MONGO_URI || 'mongodb://127.0.0.1:27017/records_pro';
-
-mongoose.connect(uri)
-  .then(() => console.log('MongoDB connected'))
-  .catch(err => console.error('Mongo connection error:', err));
+// This file is no longer needed - using JSON file storage instead of MongoDB
+// All database operations are now handled by file-based models in src/models/

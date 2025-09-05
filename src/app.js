@@ -1,7 +1,7 @@
 import express from 'express';
 import cors from 'cors';
 import morgan from 'morgan';
-// import './config/db.js'; // Commented out for file-based storage
+// Database connection removed - using JSON file storage
 import authRoutes from './routes/auth.routes.js';
 import patientRoutes from './routes/patients.routes.js';
 import reportsRoutes from './routes/reports.routes.js';
